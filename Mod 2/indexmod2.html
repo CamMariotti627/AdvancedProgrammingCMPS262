@@ -1,50 +1,65 @@
-<Doctype! html>
-  <html>
-    <title>My Professional Website</title>
+<!Doctype html>
+  <html lang="en">
     <head>
-      <h2>Cam Mariotti</h2>
-    </head>
+      <meta charset="UTF-8">
+      <title>Cam Mariotti</title>
     <style>
-      background-color: rgba(82, 2, 84, 0.9);
-      font-family: Arial, Helvetica, sans-serif;  
-      body {
-        background-color:rgba(82, 2, 84, 0.9)
-        font-family: Arial, Helvetica, sans-serif;
-        color: rgb(82,0, 84, 0.9 );
-      }
-      h1 {
-        color: rgb(226, 128, 0);
-        text-align: center;
-      }
-      h2 {
-        color: rgb(226, 128, 0);
-        text-align: center;
-      }
-      <p> {
-        color: rgb(231, 231, 4);
-        text-align: center;
-      }
-      <h3> {
-        color: rgb(226, 128, 0);
-        text-align: center;
-      }
-      Title {
-        color: rgb(44, 0, 42);
-        text-align: center;
-      }
-      head {
-        color: rgb(226, 128, 0);
-        text-align: center;
-      }
-      body {
-        color: rgb(226, 128, 0);
-        text-align: center;
-      }
+:root {
+  /* terminal dark mode color theme */
+  --bg: #000000;
+  --surface: #232323;
+  --text: #09ab09;
+  --mono: 'Courier New', monospace;
+  --accent: white;
+  --muted: #056605;
+  --border: #1a3d1a;
+  /* alt light mode terminal colors*/
+  --altbg:var(--accent);
+  --alttext:var(--bg);
+  --altaccent:var(--text);
+  /* api page colors */
+  --apibg: #FDE992;
+  --apitext: #000000;
+  --apiaccent:  #035603; 
+  --apisurface: #5a010a;
+  --apimono: "Arial", sans-serif;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+}
+big {
+  font-size: 2em;
+  font-family: var(--mono);
+  
+}
+
+h1, h2, h3 {
+  color: var(--accent);
+  font-family: var(--mono);
+  background: var(--surface);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+p {
+  color: var(--text);
+  font-family: var(--mono);
+  background: var(--bg);
+}
+
+div {
+  background: var(--bg);
+}
+
 
 
 
     </style>
+    </head>
     <body>
+      <h1>Cam Mariotti</h1>
       <img src= "images/profile photo.jpeg" alt="Me in the studio." width="300">
       <h2>
         Computer Science Student
@@ -69,8 +84,9 @@
         </h2>
           <div>
           </div>
-          <body>
+          <p>
             My Hobbies include songwriting, composing, illustrating, jogging, hanging out with my dog, cat, and girlfriend.
+          </p>
           <div>
             <h2> Interests </h2>
             <br>  
@@ -82,13 +98,14 @@
             <br>  I own a small recording studio that I run out of my house, largely for purposes of content creation and exploration of my personal musical projects. I'll include a picture of it here!
             </p>
             <img src="images/studiopic.jpg" alt="My home studio." width="600">
-          </body>
+ 
             <div>
             <h2> Summer Classes </h2> This is my last summer class before Networking in the beginning of Fall semester, having just finished Data Structures with Dr. Oliveira last summer term. 
             </div>
           <h3>
+            Previous classes and projects:
           </h3>
-        </h2>
+          <table></table>
       </div>
     </body>
 
