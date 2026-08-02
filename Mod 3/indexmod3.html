@@ -28,7 +28,6 @@
 }
 
 body {
-  display: flex;
   background: var(--bg);
   color: var(--text);
   font-family: var(--mono);
@@ -125,50 +124,12 @@ tbody tr:nth-child(even) {
   background: var(--surface);
 }
 
-nav {
-  width: 200px;
-  min-width: 200px;
-  background: var(--surface);
-  border-right: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding: 24px 0;
-}
 
-nav a {
-  display:block;
-  padding: 10px 18px;
-  color: var(--muted);
-  text-decoration: none;
-  border-left: 3px solid transparent;
-}
 
-nav a::before {
-  content: '> ';
-  color: var(--border);
-}
 
-nav a:hover {
-  color: var(--accent);
-  border-left: 3px solid var(--accent);
-}
-
-nav a:active {
-  color: var(--text);
-  border-left: 3px solid var(--text);
-}
     </style>
     </head>
     <body>
-      <nav>
-        <a href="indexmod3.html" class="active">HOME</a>
-        <a href="index.html" class="active">MOD 1</a>
-        <a href="indexmod2.html" class="active">MOD 2</a>
-
-      </nav>
     <main>
       <div style="text-align: center;">
 
