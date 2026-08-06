@@ -34,6 +34,15 @@ body {
   font-family: var(--mono);
 }
 
+body.lightmode {
+  --bg:     var(--altbg);
+  --text:   var(--alttext);
+  --accent: var(--altaccent);
+  --surface: #e0e0e0;
+  --border:  #999999;
+  --muted:   #333333;
+}
+
 big {
   font-size: 2em;
   font-family: var(--mono);
@@ -160,7 +169,71 @@ nav a:active {
   color: var(--text);
   border-left: 3px solid var(--text);
 }
+
+#page-about,
+#page-contact {
+  display: none;
+}
+
+#top-nav {
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+}
+
+#btn-toggle {
+  margin-left: auto;
+}
+
+top-nav button {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 13px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+#top-nav button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
     </style>
+    <script src="http://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+// Home button
+      $('#btn-home').click(function() {
+        $('#page-home').show();
+        $('#page-about').hide();
+        $('#page-contact').hide();
+      });
+
+// About button
+      $('#btn-about').click(function() {
+        $('#page-home').hide();
+        $('#page-about').show();
+        $('#page-contact').hide();
+      });
+
+// Contact button
+      $('#btn-contact').click(function() {
+        $('#page-home').hide();
+        $('#page-about').hide();
+        $('#page-contact').show();
+      });
+// Dark/Light mode toggle button
+      $('#btn-toggle').click(function() {
+        $('body').toggleClass('light-mode');
+      });
+    
+    });
+    </script>
     </head>
     <body>
       <nav>
@@ -169,8 +242,15 @@ nav a:active {
         <a href="/Mod2/indexmod2.html">MOD 2</a>
 
       </nav>
+      <div id="page-home">
     <main>
       <div style="text-align: center;">
+      <div id="top-nav">
+        <button id="btn-home">Home</button>
+        <button id="btn-about">About</button>
+        <button id="btn-contact">Contact</button>
+        <button id="btn-toggle">Dark/Light</button>
+      </div>
 
       <h1>Cam Mariotti</h1>
       </div>
@@ -186,38 +266,45 @@ nav a:active {
       </h2>
       <div></div>
       <div></div>
+      </div>
+      <div id="page-about">
         <h2>
           Hobbies:
         </h2>
           <div>
-          </div>
           <p>
             My Hobbies include songwriting, composing, illustrating, jogging, hanging out with my dog, cat, and girlfriend.
           </p>
+          </div>
           <div>
             <h2> Interests </h2>
             <br>  
             <p>
-            My interests include music, art, collecting vinyl, animals, storytelling, anime, manga, comics, illustration, and audio engineering, digital marketing & content creation.
+            My interests include music, art, collecting vinyl, animals, storytelling, anime, manga, comics, illustration, audio engineering, digital marketing & content creation.
             <br>
-          <div></div>
+            </div>
+          <div>
           <p>
             I play guitar, bass, drums, sing, and have been learning Japanese for a number of years, despite being pretty bad at it.
           </p>
+          </div>
             <br>
-           <div></div>
+           <div>
            <p>
              I own a small recording studio that I run out of my house, largely for purposes of content creation and exploration of my personal musical projects. I'll include a picture of it here!
             </p>
+            </div>
             <div></div>
             <div style="text-align: center;">
             <img src="images/studiopic.jpg" alt="My home studio." width="600">
             </div>
+            </div> 
             <div>
             <h2> Summer Classes </h2>
              This is my last summer class before Networking in the beginning of Fall semester, having just finished Data Structures with Dr. Oliveira last summer term. 
             </div>
-          <table>
+            <div id="page-contact"></div>
+            <h2> Contact Information </h2>          <table>
             <thead>
               <tr>
                 <th> Email </th>
@@ -234,6 +321,7 @@ nav a:active {
             </tbody>
           </table>
       </div>
+    </div>
       </main>
     </body>
 
