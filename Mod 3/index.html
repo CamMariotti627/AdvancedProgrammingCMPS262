@@ -34,7 +34,8 @@ body {
   font-family: var(--mono);
 }
 
-body.lightmode {
+body.light-mode {
+  --temp:   #035603;
   --bg:     var(--altbg);
   --text:   var(--alttext);
   --accent: var(--altaccent);
@@ -188,7 +189,7 @@ nav a:active {
   margin-left: auto;
 }
 
-top-nav button {
+#top-nav button {
   background: transparent;
   color: var(--muted);
   border: 1px solid var(--border);
@@ -242,9 +243,8 @@ top-nav button {
         <a href="/Mod2/indexmod2.html">MOD 2</a>
 
       </nav>
-      <div id="page-home">
-    <main>
-      <div style="text-align: center;">
+      <main>
+      
       <div id="top-nav">
         <button id="btn-home">Home</button>
         <button id="btn-about">About</button>
@@ -252,8 +252,8 @@ top-nav button {
         <button id="btn-toggle">Dark/Light</button>
       </div>
 
+      <div id="page-home"></div>
       <h1>Cam Mariotti</h1>
-      </div>
      <div style="text-align: center;">
       <img src= "profile-photo.jpeg" alt="Me in the studio." width="300">
     </div>
@@ -264,47 +264,43 @@ top-nav button {
         <br> Multi-Instrumentalist
         <br> Illustrator
       </h2>
-      <div></div>
-      <div></div>
       </div>
       <div id="page-about">
         <h2>
           Hobbies:
         </h2>
-          <div>
+        <br>
+        <br>
           <p>
             My Hobbies include songwriting, composing, illustrating, jogging, hanging out with my dog, cat, and girlfriend.
           </p>
-          </div>
-          <div>
+          <br>
+          <br>
+
             <h2> Interests </h2>
             <br>  
             <p>
             My interests include music, art, collecting vinyl, animals, storytelling, anime, manga, comics, illustration, audio engineering, digital marketing & content creation.
             <br>
-            </div>
-          <div>
+            <br>
           <p>
             I play guitar, bass, drums, sing, and have been learning Japanese for a number of years, despite being pretty bad at it.
           </p>
-          </div>
             <br>
-           <div>
+            <br>
            <p>
              I own a small recording studio that I run out of my house, largely for purposes of content creation and exploration of my personal musical projects. I'll include a picture of it here!
             </p>
-            </div>
-            <div></div>
             <div style="text-align: center;">
             <img src="images/studiopic.jpg" alt="My home studio." width="600">
             </div>
-            </div> 
-            <div>
             <h2> Summer Classes </h2>
              This is my last summer class before Networking in the beginning of Fall semester, having just finished Data Structures with Dr. Oliveira last summer term. 
             </div>
-            <div id="page-contact"></div>
-            <h2> Contact Information </h2>          <table>
+
+            <div id="page-contact">
+            <h2> Contact Information </h2>         
+            <table>
             <thead>
               <tr>
                 <th> Email </th>
